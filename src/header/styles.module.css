@@ -1,0 +1,31 @@
+header{
+    width: 100%;
+    min-width: fit-content;
+    height: 40px;
+    background-color: #3c3c3c;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    padding: 5px 10px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.logo{
+    width: 30px;
+}
+
+.navBtn{
+    padding: 2px 5px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #5e5e5f;
+        border-radius: 5px;
+    }
+}
