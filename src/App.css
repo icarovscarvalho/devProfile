@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction: column;
+
+    width: 50rem;
+    height: 40rem;
+    background-color: gold;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
