@@ -13,7 +13,11 @@ import purple from "../assets/folder_Purple.png"
 
 import styles from "./styels.module.css"
 
-export function MenuFolder() {
+interface MenuFolderProps {
+  handleChangeLocation: (newLocation:string[])=>void
+}
+
+export function MenuFolder({handleChangeLocation}:MenuFolderProps) {
 
   const [toggleMenu, setToggleMenu] = useState<boolean>(false)
   const colorsFolders = [blue, red, green, yellow, gray, purple]
@@ -25,7 +29,7 @@ export function MenuFolder() {
 
   function setFolderColor() {
     return colorsFolders.map((color, i) => (
-      <Folder key={i} color={colorsFolders[i]} name={namesFolders[i]} />
+      <Folder key={i} color={colorsFolders[i]} name={namesFolders[i]} handleChangeLocation={handleChangeLocation} />
     ))
   }
 

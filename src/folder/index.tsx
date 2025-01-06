@@ -8,13 +8,15 @@ import { FileTxt } from "../fileTxt";
 class FolderProps {
   color?: string;
   name?: string;
+  handleChangeLocation: (newLocation:string[])=>void
 }
 
-export function Folder({color, name}: FolderProps) {
+export function Folder({color, name, handleChangeLocation}: FolderProps) {
 
   const [toggleFolder, setToggleFolder] = useState<boolean>(false)
 
   function handleToggleFolder() {
+    handleChangeLocation(!toggleFolder && name ? ["Home", name] : ["Home"])
     setToggleFolder(!toggleFolder)
   }
 

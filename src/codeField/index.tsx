@@ -1,10 +1,11 @@
+import { CodeHeader } from "../codeHeader"
 import styles from "./styles.module.css"
 
-export function CodeField() {
+export function CodeField({actualLocation}:{actualLocation:string[]}) {
   return(
     <>
       <div className={styles.container}>
-        <p>code</p>
+        <CodeHeader actualLocation={actualLocation} />
       </div>
     </>
   )
