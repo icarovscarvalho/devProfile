@@ -1,11 +1,15 @@
 import React from "react";
+import { useContext } from "react"
+
+import { LocationContext } from "../contexts/location";
 
 import { VscChevronRight } from "react-icons/vsc";
 
 import styles from "./styles.module.css"
 
-export function CodeHeader({actualLocation}:{actualLocation:string[]}) {
+export function CodeHeader() {
 
+  const { actualLocation } = useContext(LocationContext)
   const actualLocationLength = actualLocation.length
 
   return(

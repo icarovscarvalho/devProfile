@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LocationContext } from "../contexts/location";
 
 import { VscChevronRight, VscChevronDown } from "react-icons/vsc";
 
@@ -8,11 +9,11 @@ import { FileTxt } from "../fileTxt";
 class FolderProps {
   color?: string;
   name?: string;
-  handleChangeLocation: (newLocation:string[])=>void
 }
 
-export function Folder({color, name, handleChangeLocation}: FolderProps) {
+export function Folder({color, name}: FolderProps) {
 
+  const {handleChangeLocation} = useContext(LocationContext)
   const [toggleFolder, setToggleFolder] = useState<boolean>(false)
 
   function handleToggleFolder() {
